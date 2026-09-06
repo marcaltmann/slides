@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Entwicklung und Nutzung der Programmierschnittstelle (API) der Hannah-Arendt-Edition (FU Berlin, 17. Juli 2026)</title>
+
+    <link rel="stylesheet" href="../revealjs6/dist/reset.css" />
+    <link rel="stylesheet" href="../revealjs6/dist/reveal.css" />
+    <link rel="stylesheet" href="../revealjs6/dist/theme/serif.css" id="theme" />
+
+    <!-- adjustments for serif.css -->
+    <link rel="stylesheet" href="custom.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../revealjs6/dist/plugin/highlight/monokai.css" id="highlight-theme" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$">
+<script type="text/template">
+
+### Entwicklung und Nutzung der Programmierschnittstelle (API) <br />der Hannah-Arendt-Edition
+
+<br /><br />
+
+<p style="display:flex;justify-content:center;align-items:center;gap:0.35em;font-size:0.85em;margin:0;">
+  <span>Marc Altmann</span>
+  <a href="https://orcid.org/0009-0007-3464-046X" target="_blank" rel="noopener"><img src="images/orcid-id-icon.svg" alt="ORCID iD Marc Altmann" style="width:20px;height:20px;margin:0;border:0;box-shadow:none;display:block;"></a>
+  <span>&nbsp;·&nbsp;</span>
+  <span>Frank Fischer</span>
+  <a href="https://orcid.org/0000-0003-2419-6629" target="_blank" rel="noopener"><img src="images/orcid-id-icon.svg" alt="ORCID iD Frank Fischer" style="width:20px;height:20px;margin:0;border:0;box-shadow:none;display:block;"></a>
+</p>
+
+<br />Freie Universität Berlin
+<!-- .element: style="font-size:0.7em;" -->
+
+<br /><br />
+
+Präsentation: **[lehkost.github.io/slides/2026-07-17-ae/](https://lehkost.github.io/slides/2026-07-17-ae/index.html)**
+<!-- .element: style="font-size:0.7em;" -->
+
+<br />**[Arendt-Edition](https://www.arendt-research-center.de/)** &nbsp;·&nbsp; FU Berlin &nbsp;·&nbsp; Fr, 17. Juli 2026, 14:15 Uhr
+<!-- .element: style="font-size:0.85em;" -->
+
+--
+
+### Inhalt
+
+<br />
+
+1. [Einführung](#/1)
+2. [Die API der Arendt-Edition](#/2)
+3. [»Programmable Corpora«](#/3)
+4. [Perspektiven](#/4)
+
+---
+
+## 1
+### Einführung
+
+--
+
+### Unsere Aufgabe innerhalb der dritten Förderphase (2026–2029)
+
+<br />
+
+Das Arbeitspaket XIII (Datenschnittstellen für die Digital Humanities) ermöglicht die konkrete Nachnutzung der semantisch ausgezeichneten <br />Daten der Arendt-Edition über eine gut dokumentierte Schnittstelle.
+
+--
+
+### Drei Teilaspekte des Arbeitspakets XIII
+
+<br />
+
+1. Entwicklung eines interaktiven Tutorials zur Nutzung der externen Datenschnittstelle (API), die im Arbeitspaket XII bereits technisch dokumentiert wird;
+2. Umsetzung konkreter Analysen in Jupyter Notebooks (»papers with code«), mit einem Fokus auf erläuternden Kommentaren, sodass der verwendete Programmcode leicht angepasst und für individuelle Anwendungen eingesetzt werden kann;
+<!-- .element: class="fragment" -->
+3. Erstellung einer Fallstudie als OER (Open Educational Resource), die sich am Kompetenzframework des Berlin-Brandenburgischen Datenkompetenzzentrums [QUADRIGA](https://www.quadriga-dk.de/) orientiert.
+<!-- .element: class="fragment" -->
+
+--
+
+<!-- .slide: data-background-color="black" -->
+
+![Jupiter](images/jupiter-wm-commons.jpg)<!-- .element: style="height:570px;" -->
+
+(Bildquelle: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jupiter_OPAL_2024_(cropped).png))
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+### Was sind Jupyter Notebooks?
+
+<br />
+
+- interaktive Notebooks, in deren Fließtext direkt Code ausgeführt werden kann
+  - Beispiel: [Kapitel 4.3](https://quadriga-dk.github.io/Text-Fallstudie-1/ocr/ocr_jupyter_intro.html) der QUADRIGA-Fallstudie »Quantitative Analyse der Medienwellen der Spanischen Grippe (1918/19)«
+
+--
+
+### Jupyter Notebooks als Zukunft <br />wissenschaftlichen Publizierens
+
+<br />
+
+- James Somers: The Scientific Paper Is Obsolete. Here’s what’s next. In: The Atlantic, 5. April 2018. ([URL](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/))
+
+--
+
+### Eine Vorbemerkung zum »epistemischen <br />Ding« der Digital Humanities
+
+<br />
+
+- Forschung richtet sich nie auf ›natürliche Objekte‹, sondern auf ›epistemische Dinge‹
+- das sind »Dinge, denen die Anstrengung des Wissens gilt« ([Rheinberger 2001](https://www.wallstein-verlag.de/9783892444541-experimentalsysteme-und-epistemische-dinge.html), S. 24)
+- sie entstehen erst in einem spezifischen Repräsentationsraum, eingebettet in einen Kontext aus Praktiken, Standards und Werkzeugen
+- die API als Teil des Repräsentationsraums entscheidet mit darüber, was überhaupt zum epistemischen Ding werden und wie es befragt werden kann; jede Modellierung ist zugleich Ermöglichung und Ausschluss
+- die Jupyter Notebooks machen den Übergang vom Text zum Datum sicht- und nachvollziehbar, damit auch kritisierbar (vgl. [Trilcke/Fischer 2018](https://doi.org/10.17175/sb003_003))
+
+---
+
+## 2
+### Die API der Arendt-Edition
+
+--
+
+### Was ist TEI-XML?
+
+<br />
+
+- [Text Encoding Initiative](https://tei-c.org/) (seit 1987): Kodierung von Texten inkl. struktureller und semantischer Informationen
+- XML-Standard (seit 1998): lesbar von Menschen und Computern, Metastandard für verschiedene Formate und Auszeichnungssprachen
+- es können individuelle Schemas definiert werden: z.&nbsp;B. für Bücher, Gedichte, Theaterstücke, Wörterbücher
+- beim Arendt-Projekt ist TEI-XML die Grundlage für die Webapplikation und die API
+
+--
+
+#### Ausschnitt der TEI-XML-Kodierung des Varnhagen-Texts
+
+<br />
+
+```xml
+<div type="chapter" n="Hinein in die Welt">
+    <head type="mainHeading">
+        Hinein in die Welt
+        <lb>1795-1799
+    </head>
+    <div type="subChapter" n="I. Durch Heirat">
+        <head type="subHeading">
+            I. Durch Heirat
+        </head>
+        <p>
+            Im Winter des Jahres 1795 sieht
+            <name ref="#ae3807426" type="person">Rahel</name>
+            aus ihrer Theaterloge den Grafen
+            <name ref="#ae7149345" type="person">Karl von Finckenstein</name>.
+            ...
+        </p>
+        ...
+    </div>
+    ...
+</div>
+```
+
+<br />
+
+Hierarchische Struktur, Kodierung von strukturellen und semantischen Informationen.
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+#### Darstellung in der digitalen Edition
+
+<br />
+
+![Text Digitale Edition](images/varnhagen-ausschnitt.png)<!-- .element: style="height:320px;" -->
+
+<br />
+
+Mit TEI-XML werden die Kapitelüberschriften und der Text formatiert.
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+#### Personenregister der digitalen Edition
+
+![Personenregister der digitalen Edition](images/personenregister.png)<!-- .element: style="height:480px;" -->
+
+Auf Basis des TEI-XML wird das Personenregister generiert.
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+### Was sind Normdaten?
+
+<br />
+
+- freie Vergabe von Kategorien wie *Rahel Varnhagen* ist fehleranfällig (unterschiedliche Schreibweisen, Tippfehler, Ambiguitäten)
+- eigene Identifikatoren wie *ae3807426* lösen diese Probleme innerhalb des eigenen Systems, haben außerhalb aber keine Bedeutung
+- Normdaten-Anbieter (Normdatei oder Authority File) stellen Identifikatoren zur Verfügung, auf die andere Systeme sich beziehen können
+- [d-nb.info/gnd/118626175](https://d-nb.info/gnd/118626175) (GND: Gemeinsame Normdatei)
+- [wikidata.org/entity/Q61793](http://www.wikidata.org/entity/Q61793) (Wikidata)
+- viele weitere …
+
+--
+
+![Webseite des GND-Eintrags](images/gnd-webseite.png)<!-- .element: style="height:480px;" -->
+
+Webseite des GND-Eintrags zu Rahel Varnhagen.
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+- Normdaten-Anbieter verzeichnen weitere Information über ihre Einträge, z.&nbsp;B. Geburtsdatum, Geburtsort, Gender
+- außerdem werden Beziehungen zu anderen Einträgen in einem Wissensgraphen (Knowledge Graph) festgehalten, z.&nbsp;B. Verknüpfungen zu anderen Personen als *mother, father, sibling, spouse*
+- dadurch müssen Anbieter nicht alle Informationen im eigenen System vorhalten
+
+![GND-Daten](images/gnd-daten.png)<!-- .element: style="height:200px;" -->
+
+Die Arendt-Edition hält selbst nur wenige Informationen über Einträge im Personenregister vor.
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+### Was ist eine API?
+
+API: wörtlich *Schnittstelle zur Programmierung von Anwendungen*
+
+<br />
+
+|               | Webanwendung                                      | Web-API                                               |
+|---------------|---------------------------------------------------|-------------------------------------------------------|
+| Schnittstelle | Seiten, Text, Links, Tabellen, Formulare, Buttons | Endpunkte/URLs, Argumente, Rückgabewerte, Fehlercodes |
+| Sprache       | HTML                                              | XML, JSON                                             |
+| Software      | Webbrowser (Firefox, Chrome, Safari)              | Python-Skripte, Jupyter-Notebooks, andere Server      |
+| Benutzer      | Jeder                                             | Digital Humanists, Entwickler\*innen                  |
+
+<br />
+
+»An API is a web interface for software« (Arnaud Lauret: *The Design of Web APIs*, 2019, S. 4)
+<!-- .element: style="font-size:0.85em;" -->
+
+--
+
+### Die API der Arendt-Edition
+
+<br />
+
+- seit Anfang Juli Beta-Version (Version 0.1.0)
+- die Endpunkte sind vorerst auf die Abfrage von Daten zu Personen und Textressourcen beschränkt
+- für Textressourcen ist bis jetzt die Rückgabe der TEI-XML-Quelle und die Extraktion von Plain Text (einfacher Text ohne Auszeichnungen) implementiert
+
+--
+
+### Web-Interface der API
+
+<br />
+
+![API der AE](images/api-ae.png)<!-- .element: style="height:380px;" -->
+
+<br />
+
+[test.hannah-arendt-edition.net/exist/apps/sade-Arendt/api.html](https://test.hannah-arendt-edition.net/exist/apps/sade-Arendt/api.html) (derzeit nur über Uni-VPN) → **Live-Demo**
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+### Stand der API-Entwicklung
+
+<br />
+
+- zu Demonstrationszwecken sind derzeit Endpunkte zu erwähnten Personen und den TEI-kodierten Texten angelegt
+- weitere Funktionen mit interessanten Forschungsperspektiven müssen wir gemeinsam entwickeln
+- auf den folgenden Folien finden sich zwei beispielhafte Visualisierungen, die demonstrieren, wie wir dank Normdatenmapping von Entitäten wie Personen, Orten und Werken Informationen nutzen können, die von der AE selbst gar nicht ausgezeichnet werden
+
+--
+
+### Visualisierungsdemo 1
+
+![Geburtsorte aller erfassten Personen](images/birthplace-map-new.svg)<!-- .element: style="height:420px;" -->
+
+Geburtsorte aller Personen, über die derzeit Informationen im API-Output vorliegen. <br />Vgl. auch Maximilian Schich et al.: A Network Framework of Cultural History. <br />In: *Science*. Vol. 345, Issue 6196 (2014), S. 558–562. ([doi:10.1126/science.1240064](https://doi.org/10.1126/science.1240064))
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+### Visualisierungsdemo 2
+
+![Genderangaben laut Wikidata](images/gender-pie.svg)<!-- .element: style="height:420px;" -->
+
+Genderangaben laut Wikidata. Für 13% der Personen (»unknown«) <br />haben wir im Moment noch keine Normdatenverknüpfungen.
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+### Quantifizierung nicht als Selbstzweck
+
+<br />
+
+»Man darf nicht vergessen, dass auch bei einer korrekt durchgeführten Zählung als Ergebnis eine Zahl entsteht, die nur die Gebräuchlichkeit beziehungsweise Häufigkeit des Phänomens kennzeichnet, keineswegs aber seine Qualität.«
+
+<br />
+
+Boris V. Tomaševskij: Problema stichotvornogo ritma. In: Literaturnaja mysl’. Kn. II. <br />Petrograd: Mysl’ 1923, S. 124–140, hier [S. 140](https://viewer.rusneb.ru/ru/000199_000009_008476796?page=71). (Unsere Übersetzung.)
+<!-- .element: style="font-size:0.65em;" -->
+
+---
+
+## 3
+### »Programmable Corpora«
+
+--
+
+### Am Beispiel von DraCor
+
+![DraCor-Frontpage am 26.06.2026](images/dracor-frontpage-2026-06-26.png)<!-- .element: style="width:980px;" -->
+
+[dracor.org](https://dracor.org/)
+
+--
+
+### Was sind »Programmable Corpora«?
+
+<br />
+
+- Begriff eingeführt in [Fischer et al. 2019](https://doi.org/10.5281/zenodo.4284002)
+- Korpora nicht nur als Volltextdownloads betrachten, sondern als Forschungsökosystem, das sich um eine API herum organisiert
+- abgefragt werden nicht Dateien, sondern maßgeschneiderte Ausschnitte extrahierter Daten
+- die Daten bleiben offen (TEI-XML auf GitHub, freie Lizenz), aber die API liefert zusätzlich das, was aus dem TEI abgeleitet werden kann: Metadaten, spezifische Textschichten, Netzwerkdaten, Volltexte
+- ergänzt um einen SPARQL-Endpunkt, der Entitäten wie Autor\*innen, Werke und Figuren an die Linked-Open-Data-Cloud anschließt
+
+--
+
+### Forschungsbeispiel
+
+#### Epifizierungstendenzen im deutschsprachigen Drama, <br />untersucht anhand von Regieanweisungen
+
+![Historische Verteilung bestimmter Wortarten in Regieanweisungen](images/stage-directions-historical-distribution-for-selected-pos.png)
+
+Peer Trilcke, Christopher Kittel, Nils Reiter, Daria Maximova, Frank Fischer: <br />**[Opening the Stage: A Quantitative Look at Stage Directions in German Drama.](https://dh2020.adho.org/wp-content/uploads/2020/07/337_OpeningtheStageAQuantitativeLookatStageDirectionsinGermanDrama.html)** <br />In: DH2020: »carrefours/intersections«. Book of Abstracts. University of Ottawa.
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+#### Beispiel (mit rdracor, dem DraCor-API-Wrapper für R)
+
+```R
+library(rdracor)
+library(igraph)
+hermann <- get_net_cooccur_igraph(corpus="ger", play="kleist-die-hermannsschlacht")
+plot(hermann)
+```
+… visualisiert für jedes beliebige Stück einen Ko-Okkurrenz-Graph …
+<!-- .element: style="font-size:0.6em; margin-top:2.5em;" -->
+
+![Hermannsschlacht, Netzwerkgraph mit rdracor](images/hermannsschlacht-rdracor-graph.png)<!-- .element: style="height:340px;" -->
+
+… und ermöglicht einen → [Vergleich im Distant-Reading-Modus](https://doi.org/10.6084/m9.figshare.31113820)
+<!-- .element: style="font-size:0.6em;" -->
+
+--
+
+### Rolle der API in der Forschung
+
+<br />
+
+- die API bringt die Inhalte der Korpora näher an konkrete Forschung und macht diese reproduzierbar
+- seit Anfang 2024 wurden über 100 DraCor-basierte Forschungsarbeiten veröffentlicht (inkl. Monografien)
+- siehe [dracor.org/doc/research](https://dev.dracor.org/doc/research)
+
+---
+
+## 4
+### Perspektiven
+
+--
+
+### »Digital Scholarly Editions as Interfaces«
+
+<br />
+
+- [Open Access-Sammelband](https://www.i-d-e.de/publikationen/schriften/bd-12-interfaces/) (2018)
+- das Primat liegt nicht bei GUI oder API, sondern beim Datenmodell, das beide trägt ([Bleier/Klug 2018](http://nbn-resolving.de/urn:nbn:de:hbz:38-90942), [Cayless 2018](http://nbn-resolving.de/urn:nbn:de:hbz:38-91191))
+- die API ist kein Zusatzfeature, sondern die Bedingung dafür, dass eine Edition mehr als eine Lesart ihrer selbst zulässt ([Witt 2018](http://nbn-resolving.de/urn:nbn:de:hbz:38-91182))
+- genuine Forschung auf der Basis digitaler Editionen ist noch selten, da der Schwerpunkt meist auf der GUI liegt, nicht auf der API
+- eine Ausnahme: Briefnetzwerke ([correspSearch](https://correspsearch.net/), [Dehmel digital](https://dehmel-digital.de/network))
+
+--
+
+### Drei-Sphären-Modell der Digital Humanities
+
+![Mapping DH (Patrick Sahle)](images/sahle_3-sphaerenmodell_2026.png)<!-- .element: style="width:540px;border:none;box-shadow:none;" -->
+
+Modell (zuerst veröffentlicht 2013, Stand 2021) von Patrick Sahle, Bergische Universität Wuppertal.
+<!-- .element: style="font-size:0.65em;" -->
+
+--
+
+### Digitale/komputationelle Philosophie?
+
+<br />
+
+- ein Beispiel: [»Patterns of Verb Usage in Immanuel Kant’s Critical Writings«](https://lehkost.github.io/slides/2022-07-27-tokyo/index.html) ([doi:10.5281/zenodo.21380797](https://doi.org/10.5281/zenodo.21380797))
+- Part-of-Speech-Tagging, um Verben zu erkennen, deren Vorkommen und Verteilung in drei Subkorpora bestimmt wird (theoretische Philosophie, praktische Philosophie, Ästhetik/Teleologie)
+- generischen Verben, die in allen Subkorpora gleichgewichtig vorkommen, stehen spezifische Verben gegenüber, die eine signifikante Bedeutung für eines der Subkorpora haben
+- dieser Ansatz basiert auf einer Verarbeitung der Volltexte, die kein Markup im Sinne der TEI aufweisen
+
+--
+
+### Ausblick
+
+<br />
+
+- Können sich durch die API neue Perspektiven des Lesens ergeben?
+- Was wären interessante Fragestellungen, für die geeignete Daten über die API ausgegeben werden können?
+- Die Entwicklung der API erfordert einen stetigen Austausch zwischen allen Arbeitspaketen der Edition und mit der internationalen Community.
+
+---
+
+Vielen Dank.
+
+</script>
+        </section>
+      </div>
+    </div>
+    <script src="../revealjs6/dist/reveal.js"></script>
+    <script src="../revealjs6/dist/plugin/notes.js"></script>
+    <script src="../revealjs6/dist/plugin/markdown.js"></script>
+    <script src="../revealjs6/dist/plugin/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        transition: 'fade',
+        backgroundTransition: 'fade',
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>
