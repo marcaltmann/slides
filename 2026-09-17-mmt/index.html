@@ -61,15 +61,12 @@ Präsentation: **[marcaltmann.github.io/slides/2026-09-17-mmt/](https://marcaltm
 
 <br />
 
+- Wofür? "Preproduction". Nutzende wollen Videos/Audios
+  - transkodieren (kleinere Web-taugliche Versionen erzeugen)
+  - transkribieren
+  - anonymisieren (Audio an bestimmten Stellen 'muten')
 - Ursprünglich ein von uns entwickeltes NodeJS-Tool zum Upload von großen Mediendateien (bis 70GB)
-- Seit zwei Jahren in Python/Django neu entwickelt, mit einigen neuen Funktionen:
-  - Chunked-/Resumable Upload
-  - Basis-Projektmanagement
-  - Tickets für manuelle Aufträge erstellen (z.B. Anfrage nach ASR usw.)
-  - Management von Transkripten (Beta)
-  - Anbindung von ASR-Service (Beta)
-  - Anbindung von NER-Service (Beta)
-  - Transkripteditor auf Word-Ebene (Beta)
+- Seit zwei Jahren in Python/Django neu entwickelt, mit einigen neuen Funktionen.
 
 --
 
@@ -116,22 +113,22 @@ Grundlegende Architektur.
 
 --
 
+#### ASR-Service
+
+- FastAPI-Service (als Docker-Container)
+- ASR mit WhisperX
+- Transcription, Forced Alignment für Word Timestamps, Speaker Diarization
+- multilingual (30 Sprachen)
+- GPU
+
+--
+
 #### NER-Service
 
 - FastAPI-Service (als Docker-Container)
 - NER mit Gliner2
 - multilinguale NER
 - CPU-only
-
---
-
-#### ASR-Service
-
-- FastAPI-Service (als Docker-Container)
-- ASR mit WhisperX
-- Transcription, Forced Alignment für Word Timestamps, Speaker Diarization
-- multilingual (26/29 Sprachen)
-- GPU
 
 --
 

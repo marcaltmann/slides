@@ -28,10 +28,10 @@
 <text x="442" y="204" text-anchor="start" font-size="12" fill="#5F5E5A">HTTP</text>
 
 <rect x="120" y="240" width="200" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
-<text x="220" y="260" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3C3489">FastAPI: NER</text>
-<text x="220" y="278" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">Entitätenerkennung</text>
+<text x="220" y="260" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3C3489">FastAPI: ASR</text>
+<text x="220" y="278" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">Spracherkennung</text>
 
 <rect x="380" y="240" width="200" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
-<text x="480" y="260" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3C3489">FastAPI: ASR</text>
-<text x="480" y="278" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">Spracherkennung</text>
+<text x="480" y="260" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3C3489">FastAPI: NER</text>
+<text x="480" y="278" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">Entitätenerkennung</text>
 </svg>
